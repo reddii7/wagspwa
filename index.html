@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -8,12 +9,14 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <style>
-    html, body {
+    html,
+    body {
       height: 100%;
       min-height: 100%;
       background: #E8E4DE;
       overscroll-behavior: none;
     }
+
     body {
       min-height: 100vh;
       height: 100vh;
@@ -27,6 +30,7 @@
       display: flex;
       flex-direction: column;
     }
+
     main.container {
       flex: 1 0 auto;
       display: flex;
@@ -34,22 +38,27 @@
       justify-content: flex-start;
       min-height: 0;
     }
+
     .navbar {
       background: #E8E4DE !important;
       box-shadow: none !important;
       border-bottom: none !important;
     }
+
     .navbar-brand {
       font-weight: 800;
       letter-spacing: 1px;
     }
+
     .nav-link {
       font-weight: 500;
       letter-spacing: 1px;
     }
+
     .offcanvas {
       background: #E8E4DE;
     }
+
     .navbar-toggler {
       border: none !important;
       background: transparent !important;
@@ -58,10 +67,12 @@
       padding: 0.25rem 0.5rem;
       z-index: 1201;
     }
+
     .navbar-toggler:focus {
       outline: none !important;
       box-shadow: none !important;
     }
+
     .navbar-toggler-icon {
       background-image: none !important;
       width: 1.5em;
@@ -73,6 +84,7 @@
       align-items: center;
       background: none !important;
     }
+
     .navbar-toggler-icon span {
       display: block;
       height: 1.5px;
@@ -82,9 +94,11 @@
       margin: 2px 0;
       transition: all 0.2s;
     }
+
     .navbar-toggler-icon span:last-child {
       margin-bottom: 0;
     }
+
     .navbar-toggler-icon span:nth-child(3) {
       display: none;
     }
@@ -92,8 +106,12 @@
     /* Full page nav overlay */
     .fullpage-nav {
       position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      width: 100vw; height: 100vh;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 100vh;
       background: #E8E4DE;
       z-index: 1200;
       display: flex;
@@ -104,19 +122,23 @@
       pointer-events: none;
       visibility: hidden;
     }
+
     .fullpage-nav.open {
       pointer-events: auto;
       visibility: visible;
     }
+
     .fullpage-nav ul {
       list-style: none;
       padding: 0;
       margin: 0;
       text-align: center;
     }
+
     .fullpage-nav ul li {
       margin: 2rem 0;
     }
+
     .fullpage-nav ul li a {
       font-size: 2.2rem;
       color: #222;
@@ -126,9 +148,11 @@
       letter-spacing: 2px;
       transition: color 0.2s;
     }
+
     .fullpage-nav ul li a:hover {
       color: #888;
     }
+
     .fullpage-nav .close-nav {
       position: absolute;
       top: 2rem;
@@ -140,6 +164,7 @@
       cursor: pointer;
       z-index: 1202;
     }
+
     @media (max-width: 600px) {
       .fullpage-nav ul li a {
         font-size: 1.5rem;
@@ -147,6 +172,7 @@
     }
   </style>
 </head>
+
 <body>
   <!-- Bootstrap Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top">
@@ -175,6 +201,32 @@
 
   <!-- Main Content -->
   <main class="container" style="padding-top: 90px;">
+
+    <!-- Add this inside your <main class="container" ...> block, after the opening tag or wherever you want the card to appear -->
+    <div class="d-flex justify-content-center align-items-center" style="margin-bottom: 15px;">
+      <div class="card custom-main-card border-0"
+        style="width:95vw;  height:25vh; border-radius:1rem; background:#292727;">
+        <div class="card-body d-flex flex-column justify-content-center align-items-center h-100 text-white">
+          <h3 class="card-title mb-3">Main Card Title</h3>
+          <p class="card-text text-center">This is a sample card that fills 75% of the viewport height and 95% of the
+            viewport width. You can put any content here.</p>
+          <!-- Add more content here as needed -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Add this inside your <main class="container" ...> block, after the opening tag or wherever you want the card to appear -->
+    <div class="d-flex justify-content-center align-items-center" style="margin-bottom: 15px;">
+      <div class="card custom-main-card border-0"
+        style="width:95vw;  height:25vh; border-radius:1rem; background:#292727;">
+        <div class="card-body d-flex flex-column justify-content-center align-items-center h-100 text-white">
+          <h3 class="card-title mb-3">Main Card Title</h3>
+          <p class="card-text text-center">This is a sample card that fills 75% of the viewport height and 95% of the
+            viewport width. You can put any content here.</p>
+          <!-- Add more content here as needed -->
+        </div>
+      </div>
+    </div>
     <section id="home" class="my-5">
       <h1>Welcome to WAGS</h1>
       <p>This is a modern Bootstrap 5 site with a responsive navigation bar.</p>
@@ -195,6 +247,7 @@
       <h2>Contact</h2>
       <p>Contact section content goes here.</p>
     </section>
+
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -207,9 +260,9 @@
 
     function openNav() {
       nav.classList.add('open');
-      gsap.fromTo(nav, 
-        {opacity: 0, scale: 0.8}, 
-        {opacity: 1, scale: 1, duration: 0.5, ease: "power2.out"}
+      gsap.fromTo(nav,
+        { opacity: 0, scale: 0.8 },
+        { opacity: 1, scale: 1, duration: 0.5, ease: "power2.out" }
       );
       document.body.style.overflow = 'hidden';
     }
@@ -239,4 +292,5 @@
     });
   </script>
 </body>
+
 </html>
