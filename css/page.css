@@ -16,7 +16,7 @@
 
       /* Remove border and shadow from the rules modal */
       #best14RulesModal .modal-content {
-        border: none !important;
+      
         box-shadow: none !important;
       }
 
@@ -248,3 +248,4 @@ main.page-wrapper {
 .arrow-icon-circle .ai-arrow-right {
   font-size: 1rem; /* Adjust icon size if fs-xl is too large for the circle */
 }
+
