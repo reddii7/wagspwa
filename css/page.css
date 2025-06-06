@@ -16,7 +16,7 @@
 
       /* Remove border and shadow from the rules modal */
       #best14RulesModal .modal-content {
-      
+        border: none !important;
         box-shadow: none !important;
       }
 
